@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #00ffcc; /* neon accent */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+a { text-decoration: none; }
