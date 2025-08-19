@@ -1,0 +1,29 @@
+import { createBrowserRouter } from 'react-router-dom'
+import App from './App'
+import Home from './pages/Home'
+import Shop from './pages/Shop'
+import ProductDetail from './pages/ProductDetail'
+import Lookbook from './pages/Lookbook'
+import Movement from './pages/Movement'
+import Journal from './pages/Journal'
+import B2B from './pages/B2B'
+import Contact from './pages/Contact'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'shop', element: <Shop /> },
+      { path: 'product/:id', element: <ProductDetail /> },
+      { path: 'lookbook', element: <Lookbook /> },
+      { path: 'movement', element: <Movement /> },
+      { path: 'journal', element: <Journal /> },
+      { path: 'b2b', element: <B2B /> },
+      { path: 'contact', element: <Contact /> },
+    ]
+  }
+])
+
+export default router
